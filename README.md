@@ -56,5 +56,7 @@ venv/Scripts/activate
 
 #### Вы также можете проверить тестовые значения, которые подгружаются сразу при развертке проекта.
 from_time=1545221231
+
 to_time=1545255555
-  ```http://localhost:8000/visited_domains?from_time=1545221231&to_time=1545255555```
+
+```http://localhost:8000/visited_domains?from_time=1545221231&to_time=1545255555```
