@@ -60,3 +60,14 @@ from_time=1545221231
 to_time=1545255555
 
 ```http://localhost:8000/visited_domains?from_time=1545221231&to_time=1545255555```
+
+#### Добавить свои значения в БД
+```http://localhost:8000/visited_links```
+##### Пример body запроса:
+```
+{
+  "links": [
+    "sber.ru"
+  ]
+}
+```
