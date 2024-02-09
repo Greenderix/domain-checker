@@ -32,6 +32,8 @@ def insert_links(links):
             conn.execute(text("INSERT INTO Visits (link, visit_time) VALUES (:link, :visit_time)"),
                          {"link": link, "visit_time": datetime.utcnow()})
     finally:
+        conn.commit()
+
         conn.close()
 
 
@@ -46,6 +48,8 @@ def get_visited_domains(from_time: int, to_time: int):
         domains = [row[0] for row in result.fetchall()]
         return domains
     finally:
+        conn.commit()
+
         conn.close()
 
 

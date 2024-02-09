@@ -22,10 +22,8 @@ class DBSettings(BaseSettings):
                 f'{self.DB_DRIVER}://{self.DB_USER}:{self.DB_PASSWORD}@'
                 f'{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}'
             )
-        elif self.MODE == 'TEST':
-            return f'{self.DB_DRIVER}:///{self.DB_NAME}'
         else:
-            raise ValueError('Неверное значение объекта "MODE".')
+            raise ValueError('Нет значения MODE для сервера.')
 
     class ConfigDict:
         env_file = '.env'
